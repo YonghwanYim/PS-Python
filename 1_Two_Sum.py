@@ -4,9 +4,6 @@ LeetCode 1. Two Sum
 https://leetcode.com/problems/two-sum/description/
 """
 
-
-
-
 # Brute force O(N^2)
 class Solution(object):
     def twoSum(self, nums, target):
