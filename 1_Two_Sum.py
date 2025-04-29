@@ -1,7 +1,7 @@
 """
-Author : Yonghwan Yim
-LeetCode 1. Two Sum
-https://leetcode.com/problems/two-sum/description/
+* Author : Yonghwan Yim
+* LeetCode 1. Two Sum
+* https://leetcode.com/problems/two-sum/description/
 """
 
 # Brute force O(N^2)
