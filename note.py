@@ -4,13 +4,56 @@
 """
 # PEP 8 : Use a def statement instead of an assignment that binds a lambda expression directly to an identifier.
 
-""" Type Hint """
-def fn(a: int) -> bool:
-    result = True if a==10 else False # python에서의 삼항연산자 위치 기억. C, java와 다름
+"""
+range() function.
+A typical function that uses the generator approach.
+"""
+
+
+"""
+Generator (Python 2.2~)
+Use 'yield' to return a generator, and 'next' to retrieve the next value.
+"""
+def get_natural_number():
+    n = 0
+    while True:
+        n += 1    # After each next() call, the code executes and returns the value using yield.
+        yield n
+
+gen = get_natural_number() # Assign the generator object to a variable.
+for _ in range(0,10):
+    print(next(gen))
+
+def generator():
+    # Multiple types of values can be generated in a single function.
+    yield 1
+    yield 'string'
+    yield 'True'
+
+g = generator()
+for _ in range(0,3):
+    print(next(g))
+
+"""
+List Comprehension (Python 2.7~)
+Applicable to both lists and dictionaries
+"""
+a = [n * 2 for n in range(1, 10+1) if n % 2 == 1]
+print(a)
+
+
+""" 
+Type Hint (Python 3.5~)
+Even when using type hints, they are not enforced at runtime,
+so it's important to be aware that values can still be dynamically assigned.
+"""
+def fn(a: int) -> bool: # use type hint !!
+    result = True if a==10 else False  # Reminder : Python's ternary operator has a different order than in C/Java
     return result
 
-
-""" 기본 클래스 """
+"""
+class
+"""
 from dataclasses import dataclass
 @dataclass
 class Rectangle:
@@ -22,9 +65,12 @@ class Rectangle:
 rect = Rectangle(3, 4)
 print(rect.area())
 
-""" dataclass (python에서 C의 struct 대안) """
+"""
+dataclass
+serves as a lightweight alternative to C structs in Python
+"""
 from dataclasses import dataclass
-@dataclass # dataclass decorator를 붙이면, 자동으로 여러 method 생성 (__init__ 등)
+@dataclass # The @dataclass decorator automatically generates methods like __init__, etc.
 class Product:
     weight: int = None
     price: float = None
@@ -34,14 +80,16 @@ apple.price = 10
 apple.weight = 38
 print(apple)
 
-
-""" 배열 (list) 반복 """
+"""
+Loop through a list
+"""
 foo = ['A', 'B', 'C']
 for f in foo:
     print(f)
 
-
-""" Python은 generic이 필요 없지만, 가독성을 위해 type 명시 """
+""" 
+Python doesn't require generics, but type hints improve readability
+"""
 from typing import TypeVar
 
 T = TypeVar('T') # <class 'int'>
@@ -50,13 +98,13 @@ U = TypeVar('U') # <class 'float'>
 def are_equal(a: T, b: U) -> bool:
     return a==b
 
-# Python은 int, float간 비교가 허용되고 값이 같으면 True 반환.
-print(are_equal(10, 10.0)) # 따라서 타입이 다르지만 True 출력
+# Python allows comparisons between int and float; returns True if values are equal
+print(are_equal(10, 10.0)) # Types are different, but True is returned
+# Although the object types differ, the comparison is internally evaluated like this:
+print(float(10) == 10.0)   # True
 
-# 따라서 객체의 타입은 다르지만 연산은 내부적으로 아래와 같이 이뤄짐.
-print(float(10) == 10.0) # True
-
-
-""" Sum 1~10. Use range() """
+"""
+Sum 1~10. Use range()
+"""
 sum = sum(range(1, 10+1))
 print(sum)
