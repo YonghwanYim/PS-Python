@@ -4,6 +4,12 @@
 """
 # PEP 8 : Use a def statement instead of an assignment that binds a lambda expression directly to an identifier.
 
+""" Type Hint """
+def fn(a: int) -> bool:
+    result = True if a==10 else False # python에서의 삼항연산자 위치 기억. C, java와 다름
+    return result
+
+
 """ 기본 클래스 """
 from dataclasses import dataclass
 @dataclass
