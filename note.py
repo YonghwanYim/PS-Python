@@ -1,14 +1,54 @@
 """
 * Author : Yonghwan Yim
-* Title : Test
+* Title : Note
 """
 # PEP 8 : Use a def statement instead of an assignment that binds a lambda expression directly to an identifier.
+import sys
+
+"""
+print
+"""
+print('A', 'B', sep=',') # sep parameter
+print('aa', end=' ') # Setting the end parameter to a space avoids line breaks between print outputs
+
+
+"""
+// operator performs floor division (returns the largest whole number less than or equal to the result)
+In other words, it returns the integer part of the division (the quotient).
+"""
+print(5/3)  # 1.66..
+print(5//3) # 1
+print(5%3)  # Remainder; 2
+# divmod() returns both the quotient and the remainder at once.
+print(divmod(5, 3))
+
+"""
+enumerate returns both the index and the value when iterating over an iterable
+"""
+a = [1, 2, 3, 2, 45, 2, 5]
+print(list(enumerate(a)))
+
+for i, v in enumerate(a):
+    print(i, v)
+
 
 """
 range() function.
-A typical function that uses the generator approach.
+A typical function that uses the generator approach (Python 3~).
 """
+# Compare memory usage when generating 1 million numbers.
+a = [n for n in range(1000000)]
+b = range(1000000)
 
+# 'a' holds pre-generated values, while 'b' only defines the condition to generate them; both have the same length
+print(len(a) == len(b))
+print(type(b)) # <class 'range'>
+
+# Memory usage comparison
+sys.getsizeof(a) # 8448728
+sys.getsizeof(b) # 48
+
+print(b[999])    # Configured to generate values on-the-fly when accessed by index.
 
 """
 Generator (Python 2.2~)
