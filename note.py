@@ -4,16 +4,45 @@
 """
 # PEP 8 : Use a def statement instead of an assignment that binds a lambda expression directly to an identifier.
 import sys
+import pprint # for locals()
+
+"""
+locals() [<-> globals()]
+Returns a dictionary of the current local symbol table (i.e., local variables and their values)
+"""
+pprint.pprint(locals())
+
+def example(a : int, b : int) -> int:
+    c = a + b
+    print(locals()) # Useful for debugging.
+
+example(3, 5)
+
+"""
+Use 'pass' to define a placeholder for future implementation
+"""
+class MyClass(object):
+    def method_a(self):
+        pass  # placeholder for future implementation.
+    def method_b(self):
+        print("Method B")
+
+c = MyClass()
 
 """
 print
 """
 print('A', 'B', sep=',') # sep parameter
 print('aa', end=' ') # Setting the end parameter to a space avoids line breaks between print outputs
+print('bb')
 
+# f-string (formated string literal)
+idx = 1
+fruit = 'Apple'
+print(f'{idx + 1} : {fruit}') # Most intuitive.
 
 """
-// operator performs floor division (returns the largest whole number less than or equal to the result)
+'//' operator performs floor division (returns the largest whole number less than or equal to the result)
 In other words, it returns the integer part of the division (the quotient).
 """
 print(5/3)  # 1.66..
@@ -77,6 +106,7 @@ for _ in range(0,3):
 """
 List Comprehension (Python 2.7~)
 Applicable to both lists and dictionaries
+Be careful not to overuse it, as it can reduce readability.
 """
 a = [n * 2 for n in range(1, 10+1) if n % 2 == 1]
 print(a)
