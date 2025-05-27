@@ -4,7 +4,7 @@
 """
 # PEP 8 : Use a def statement instead of an assignment that binds a lambda expression directly to an identifier.
 import sys
-import pprint # for locals()
+import pprint  # for locals()
 
 """
 locals() [<-> globals()]
