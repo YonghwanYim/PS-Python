@@ -6,6 +6,12 @@
 import sys
 import pprint  # for locals()
 
+"""
+int : Arbitrary-Precision
+bool : object > int > bool (sub-class of int)
+"""
+print(True == 1)
+
 
 """
 locals() [<-> globals()]
