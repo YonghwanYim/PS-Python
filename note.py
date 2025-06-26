@@ -5,9 +5,30 @@
 # PEP 8 : Use a def statement instead of an assignment that binds a lambda expression directly to an identifier.
 import sys
 import pprint  # for locals()
+import copy
 
 """
-int : Arbitrary-Precision
+is / ==
+"""
+a = [1, 2, 3]
+print(a == copy.deepcopy(a))  # True  (same value)
+print(a is copy.deepcopy(a))  # False (ID is different)
+
+
+"""
+set: A collection that does not allow duplicates
+dict: A key-value pair data structure
+"""
+a = set()    # empty set
+print(type(a))
+a = {'a', 'b', 'c'}
+print(type(a))
+a = {'a':'A', 'b':'B', 'c':'C'}
+print(type(a))
+
+
+"""
+int : Arbitrary-Precision (Version 3~)
 bool : object > int > bool (sub-class of int)
 """
 print(True == 1)
