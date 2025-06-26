@@ -6,6 +6,7 @@
 import sys
 import pprint  # for locals()
 
+
 """
 locals() [<-> globals()]
 Returns a dictionary of the current local symbol table (i.e., local variables and their values)
