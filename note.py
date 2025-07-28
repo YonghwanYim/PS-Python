@@ -2,10 +2,48 @@
 * Author : Yonghwan Yim
 * Title : Note
 """
+import collections
 # PEP 8 : Use a def statement instead of an assignment that binds a lambda expression directly to an identifier.
 import sys
 import pprint  # for locals()
 import copy
+"""
+Dictionary Module (defaultdict, Counter, OrderedDict)
+"""
+a = collections.defaultdict(int) # defaultdict 객체는 존재하지 않는 키 조회시 디폴트 값을 기준으로 해당 키에 대한 dictionary item 생성.
+a['A'] = 5
+a['B'] = 3
+a['C'] += 1  # dafault : 0
+print(a)
+
+a = [1, 2, 2, 3, 4, 4, 4, 5, 6, 7, 7, 7, 7]
+b = collections.Counter(a) # item 수 계산 후 dictionary로 리턴
+print(b)
+print(type(b)) # dictionary를 Wrapping 한 collection.Counter class
+
+a = collections.OrderedDict({'banana' : 3, 'apple' : 4, 'pear' : 1}) # Hash table을 이용한 자료형이지만, 입력 순서가 유지됨.
+print(a)
+
+"""
+Dictionary
+"""
+a = dict()
+a['key1'] = 'value1'
+a['key2'] = 'value2'
+
+print(a['key1'])
+
+# exception
+try:
+    print(a['key3'])
+except KeyError:
+    print('존재하지 않는 키')
+
+for k,v in a.items():
+    print(k,v)
+
+del a['key2']
+print(a)
 
 """
 is / ==
