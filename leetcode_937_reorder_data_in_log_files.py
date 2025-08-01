@@ -6,7 +6,7 @@
 """
 from typing import List
 
-class Solution:
+class Solution: # runtime : 2 ms
     def reorderLogFiles(self, logs: List[str]) -> List[str]:
         letters, digits = [], []   # empty list
         for log in logs: # letter, digit의 두 타임을 먼저 나눔
