@@ -1,6 +1,6 @@
 """
 * Author : Yonghwan Yim
-* Final update : 25.07.28
+* Final update : 25.08.01
 * LeetCode 937. Reorder Data in Log Files
 * https://leetcode.com/problems/reorder-data-in-log-files/description/
 """
