@@ -1,7 +1,7 @@
 """
 * Author : Yonghwan Yim
-* Final update : 25.07.28
-* LeetCode 937. Reorder Data in Log Files
+* Final update : 25.08.02
+* LeetCode 819. Most Common Word
 * https://leetcode.com/problems/most-common-word/
 """
 class Solution:
