@@ -8,7 +8,9 @@
 """
 * 6025 : [기초-값변환] 정수 2개 입력받아 합 계산하기
 """
-#print(sum(map(int, input().split())))
+"""
+print(sum(map(int, input().split())))
+"""
 
 """
 * 6026 : [기초-값변환] 실수 2개 입력받아 합 계산하기
