@@ -1,7 +1,6 @@
 """
 * Author : Yonghwan Yim
 * Final Update : 25.09.08
-
 * Title : CodeUp Python 기초 100제
 * Sub : [기초-입출력] 6009 ~ 6024
 """
