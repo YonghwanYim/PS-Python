@@ -50,5 +50,6 @@ print(result)
 * 6064 : [기초-3항연산] 정수 3개 입력받아 가장 작은 값 출력하기
 """
 n_list = list(map(int, input().split()))
-min_number = n_list[0] if ((n_list[0] <= n_list[1]) and (n_list[0] <= n_list[2])) else (n_list[1] if (n_list[1] <= n_list[2]) else n_list[2])
+min_number = n_list[0] if ((n_list[0] <= n_list[1]) and (n_list[0] <= n_list[2])) \
+    else (n_list[1] if (n_list[1] <= n_list[2]) else n_list[2])
 print(min_number)
