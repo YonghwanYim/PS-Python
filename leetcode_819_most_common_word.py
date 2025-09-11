@@ -1,6 +1,6 @@
 """
 * Author : Yonghwan Yim
-* Final update : 25.08.02
+* Final update : 25.09.11
 * LeetCode 819. Most Common Word
 * https://leetcode.com/problems/most-common-word/
 """
