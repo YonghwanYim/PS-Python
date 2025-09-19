@@ -16,7 +16,9 @@
 * Space Complexity:
     - O(log n) for recursion stack (in-place version)
 """
-def quick_sort(arr): # 재귀형 Quick Sort
+
+# 재귀형 Quick Sort
+def quick_sort(arr):
     if len(arr) <= 1:
         return arr  # 배열 길이 0 또는 1이면 이미 정렬 완료
 
