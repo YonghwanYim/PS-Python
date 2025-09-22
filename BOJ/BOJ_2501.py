@@ -1,7 +1,7 @@
 """
 * Author : Yonghwan Yim
 * Final update : 25.09.22
-* BOJ 2501. 약수 구하기
+* 2501. 약수 구하기
 * https://www.acmicpc.net/problem/2501
 """
 """
