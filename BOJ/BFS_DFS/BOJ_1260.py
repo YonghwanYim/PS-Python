@@ -15,11 +15,8 @@ import sys
 from collections import defaultdict
 from collections import deque
 
-<<<<<<< HEAD
+
 def dfs(node, visited, graph, path):  # O(N+M)
-=======
-def dfs(node, visited, graph, path):  # O(N+M) # 모든
->>>>>>> origin/main
     visited.add(node)
     path.append(node)
 
